@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+    <title>Shahid's Blog</title>
+    <style>
+        body { display:flex; flex-wrap: wrap; justify-content:space-around; flex-grow: 1; flex-flow: column ;font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+        header { color: #4d4d4d; text-align: center;}
+        nav { display: flex; justify-content: space-around ;font-family: monospace; color: darkslategray;}
+        nav a { color: rgb(240, 240, 240);}
+        footer { display: flex; justify-content: center;}
+        form input, form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ccc; }
+        form button { background-color: #f05a3c; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        form button:hover { background-color: #d14a2c; }
+        .contact-form { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .social-links { display: flex; gap: 20px; margin-bottom: 30px; }
+        .social-links a { text-decoration: none; color: #f05a3c; font-weight: bold; }
+        .social-links a:hover { text-decoration: underline; }
+        #nav-bar { background-color: #f05a3c;}
+        #bookmarks { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+        #heading {font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+        .about-container { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+        .about-image { flex: 1; min-width: 200px; max-width: 300px; }
+        .about-image img { width: 100%; border-radius: 50%; }
+        .about-text { flex: 2; min-width: 300px; line-height: 1.6; }
+        .section-header { background-color: rgb(206, 231, 243); width: fit-content; padding: 5px 15px; }
+        .video-container { position: relative; overflow: hidden; padding-top: 56.25%; margin: 30px 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .local-video { max-width: 100%; margin: 20px 0; }
+        .video-section { margin: 30px 0; }
+        .video-caption { font-style: italic; color: #666; margin-top: 10px; text-align: center; }
+    </style>
+</head>
+
+<body>
+
+<!--Intro and Navbar-->
+<div id="top">
+    <div id="heading">
+<header>
+    <h1> Aura Farm for Shahid </h1> <sub>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; flex-flow: row;" >
+            <p style="height: 50%; width: 50%;"><i>color-theme inspired by <a href="https://news.ycombinator.com/newest">hn</a></i>
+            <img src="hackernews.svg" style="height: 2.5%; width: 2.5%; border-radius:50%">
+        </p>
+        </div>
+    <p><i>Blogs aimed at topics that I find interesting for now. <br>Primarily on tech, art, books and life in general.</i><p> 
+</header>
+</div>
+</br> 
+<div id="nav-bar">
+    <nav>
+        <ul>
+            <a href="#blog">Thoughts</a>
+        </ul>
+        <ul>
+            <a href="#projects">Projects</a>
+        </ul> 
+        <ul>
+            <a href="#about">About</a>
+        </ul>
+        <ul>
+            <a href="#contact">Contact</a>
+        </ul>
+        
+    </nav>    
+</div>
+</div> 
+
+<!--Main Div-->
+<div style="display: flex; flex-direction: column; margin-left: 1cm; margin-right: 1cm;"> 
+
+
+<!--Bookmarks-->
+<div id="bookmarks">
+    <h1>Bookmarks</h1> 
+
+<P>A list tracking blog-posts, articles that I am currently interested to see.
+</P>
+<ol>
+    <b><li>Research Papers</li></b>
+        <ul>
+            <li><a href="https://www.paperswithcode.com" style="color: fuchsia;">PapersWithCode</a></li>
+            <li><a href="https://arxiv.org/pdf/2305.09636.pdf" style="color: fuchsia;">SoundStorm</a></li>
+            <li><a href="https://d1qx31qr3h6wln.cloudfront.net/publications/Nemotron_4_340B_8T.pdf" style="color: fuchsia;">Nemotron-4 340B</a>
+        </ul>
+    <b><li>Blogs </li></b>
+        <ul>
+        <li><a href="https://distill.pub/" style="color: fuchsia;">DistillPub - Visualisation</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant" style="color: fuchsia;">Jacobian Matrix and Determinant</a></li>
+        <li><a href="http://catb.org/" style="color: fuchsia;">Eric Raymond</a></li>
+        <li><a href="https://vadimkravcenko.com" style="color: fuchsia;">Vadim</a></li>
+        <li><a href="https://www.onestopmba.com/blog" style="color: fuchsia;">One Stop MBA</a>
+        </ul>
+    </li>
+    <b><li>Books</li></b>
+        <ul>
+            <li><a href="http://incompleteideas.net/book/RLbook2020.pdf" style="color: fuchsia;">RL</a></li>
+            <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/" style="color: fuchsia;">Data Science Handbook</a>
+        </ul>
+    </li>
+    <b><li>Cool Stuff</li></b>
+    <ul>
+        <li ><a href="https://www.shadertoy.com" style="color: fuchsia;">Shader Geometry</a></li>
+        <li ><a href="https://www.nvidia.com/en-us/ai"; style="color: fuchsia;">NVIDIA NIM</a></li>
+        <li><a href="https://github.com/Sh9hid/PrepAtlas.git" style="color: fuchsia;">PrepAtlas</a>
+    </ul>
+</ol>
+</div>
+
+<!--Projects-->
+<div id="projects" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+
+    <h1 class="section-header">Projects</h1>
+    <p> These are some of the highlights of the work that I've been lucky to be a part of. </p>
+    <ol>
+        <div  id="prj">
+            <b><li>Copilot for Code Completion - Planto.ai <i><a href="https://planto.ai/" ;style="color: #e7e7e7;">[link]</a></i></b></li>
+        <ul>
+            <li>Building India's first LLM for code completion using large-open source models.</li>
+            <li>Built APIs for running it as a vscode extension. </li>
+            <li>Vectorized plain-structured data using MongoDb Atlas for model-training on custom dataset. </li>
+        </ul>
+        </div>
+        <br>
+        <div  id="prj">
+        <b><li>SKUs Nutritional Text OCR, Automated Checkout<i><a href="https://www.linkedin.com/posts/xplorazzi_xplorazzis-visionai-enabled-self-checkout-activity-7079902281860591617-Cttb/" ;style="color: #e7e7e7;">[link]</a></i></b></li>
+        <p>
+            <i>Key Skills: Pytorch, OpenCV, Python, Deep Learning, ML, OCR, Automation, Cutting-edge AI, ConvNext, LabellImg, HuggingFace.</i>
+        </p>
+        <ul>
+            <li>
+                Built and deployed ocr on SKUs for nutritional text extraction.
+            </li>
+            <li>
+                Tiny hyper-trained model on embedded systems.
+            </li>
+            <li>
+                Deployed in supermarkets in Portland, Oregan.
+            </li>
+        </ul>
+    </div>
+        <br>
+        <div  id="prj">
+        <b><li>Data Driven Projects<i><a href="https://www.github.com/Sh9hid/Llama3-ChatPDF" ;style="color: #e7e7e7;">[link]</a></i></b></li>
+        <p>
+            <i>Key skills: Llama3, Crewai, Openai API, Streamlit, Langchain, LLMs, PostGres, SQL, BigData, BigQuery, Supabase, Vercel, Data-cleaning, Data Manipulation, YOLO v8, model-training, OpenCV.</i>
+        </p>
+        <ul>
+            <li>
+                <b>E-commerce Warehousing:</b> Full-stack warehouse. Connect to any frontend with custom API routes, NextJs Admin Auth dashboard, Supabase, Prisma, Data-modelling.
+            </li>
+            <li>
+                <b>Mask Detection, PPE Detection: </b>Poorly-labelled data, Image Classification,Object-detection.      
+            </li>
+            <li>
+                <b>Llama3-ChatPDF :</b> Streamlit deployed, RAG-Chat locally with your PDFs.
+
+             <b><i><a href="//llama3-chatpdf.streamlit.app/">[Deployed here]</a></i></b>
+            </li>
+            <li>
+                <b>Youtube Content Writer Multi-Agents : </b> Llama 3.1b, Langchain.
+            </li>
+            <li>
+                <b>HackerNews Researchers:</b> Scrape HackerNews (or any) data using BigQuery with a local chatbot.
+            </li>
+        </ul>
+    </div>
+        <br>
+        <div  id="prj">
+        <b><li>AI Autonomous Navigation System for Warehouses<i><a href="https://github.com/Sh9hid/WarehouseVision" ;style="color: #e7e7e7;">[link]</a></i></b></li> 
+        <p>
+            <i>Key Skills: Python, Bot-Automation, AI, Numpy, Pandas, Data Visualization, OpenCV, Tkinter, Algorithms, Problem-solving</i>
+            <i>[Paper in review]</i>
+        </p>
+        <ul>
+            <li>
+                Warehouse automation bot using computer vision and artificial intelligence algorithms.
+
+            </li>
+            <li>
+                Three Wheel Holonomic Drive for Warehouse Automation review paper '23.
+            </li>
+            <li>
+                Cost management (below 90% than avg)    
+            </li>
+            <li>
+                Time efficiency (228 ms record-low)
+            </li>
+        </ul>
+    </div>
+        <br>
+        <div  id="prj">
+        <b><li>3D AR, VR, Web Applications<i><a href="https://github.com/Sh9hid/space3D" ;style="color: #e7e7e7;">[link]</a></i></li></b>
+        <p>
+            <i>Key Skills: C#, Unity, Three.js, Client Side Rendering, Unity.</i>
+        </p>
+        <ul>
+            <li>
+                Unity FPS Shooter Game.
+            </li>
+            <li>
+                Snapchat ARKit, ARVision, etc.
+            </li>
+            <li>
+                ThreeJs 3D Space App
+            </li>
+        </ul>
+    </div>
+        <br>
+
+    </ol>
+</div>
+
+<!--Blogposts-->
+<!--Blog title style-->
+<div id="blog" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex; align-items: center;">
+
+    <h1 class="section-header">Essays</h1>
+    <img src="speech-bubble.png" style=" height: 5%; width: 5%;">
+</div>
+<h3 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex; justify-content: left;">A curated list of content that I've posted on the internet.</h3>
+    <ul>
+        
+        <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><li>AI Agents: The Future of Work or Just Hype?</li><sub style="background-color: aqua; display: flex; width: 50%; "> April 2025</sub></h2>
+        <p><i style="color: rgb(205, 210, 210);">#ai, #pwl, #deeplearning </i></p>
+    <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+
+    <i>
+        I've been using AI agents for mostly, saving myself from the pitfalls of doom-scrolling, on mind-numbing, soul-sucking, overstimulating apps on the internet and by doing little menial tasks at work. <br>
+
+
+        It's very cool to have a team of LLMs co-working together on the roles you've assigned them, and exactly as requested. <br>
+        
+        It's a much higher compute for smaller tasks but, I still like the idea of having some local support on taking care of any extra overhead, if needed be. <br>
+        
+        These aren't just a bunch of fancy LLMs working in collaboration instead, are in fact, a different approach to problem solving. <br>
+        
+        In our normal procedural programming era this will need a bit of getting used to. <br>
+        
+        As we shift from writing out instructions to a machine, to managing our newly employed autonomous models that will work and do the task based on their understanding. <br>
+        
+        Give them clear, coherent roles, and they're accurate. <br>
+        Give them time, and they evolve. <br>
+        Give them tools, and they scale. <br>
+        
+        The pay out is a completely new surface area of problems we can tackle and the solutions we could approach. <br>
+        
+        Agentic frameworks like CrewAI are good, simple, lowering the barrier to complex workflows. <br>
+        
+        Easy enough for a high-schooler to be automating their social media. <br>
+        To a single-person running an agency outcompeting a team, and all the way up to businesses and governments delivering faster, better reliable solutions. <br>
+        
+        The difference isn't just of productivity, but, of ambition. <br>
+        
+        That being said, a (huge) problem with AI Agent Systems are that they don't exactly work (at least of what I was expecting)
+        
+        To go as far as saying, it can take up complete cognition, seamless task hand-offs, perfect multi-step memory management is not just there yet.
+        We have a long way to go.
+        
+        For instance, while AI agents like CrewAI are great at automating social media posts or scheduling meetings, they still struggle with more complex, multi-step workflows.
+        
+        An AI that is supposed to handle a task from start to finish often hits a roadblock when trying to make decisions based on incomplete data or when task hand-offs between agents aren't smooth.
+        
+        This lack of context retention, coupled with an inability to fully understand nuances, limits more sophisticated use cases, like sales or decision-making in a high-stakes environment.
+        
+        We're early, but the future of our work leans agentic. <br>
+        
+        
+        It's an interesting era for problem solving as software engineers get more room to focus on strategy, creativity, and focus on better generalized systems instead. <br>
+        
+        In some ways, we're no longer writing software. <br>
+        
+        We're engineering management itself. <br>
+    </i>
+    </p>
+            <!-- Local Video -->
+        <h3>Demo: My CrewAI Agent in Action</h3>
+        <video class="local-video" controls>
+            <source src="Recording 2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="video-caption">A demonstration of my custom AI agent handling multi-step tasks</p>
+    </div>
+    
+    </ul>
+
+<!--About-->
+<div id="about" style="margin-left:1cm;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+
+    <h1 class="section-header">About</h1>
+    
+    <div class="about-container">
+        <div class="about-image">
+            <img src="dp.jpeg" alt="Abdullah Shahid Khan">
+        </div>
+        
+        <div class="about-text">
+            <p>
+                <div class="typewriter-wrapper">
+                <div class="typewriter-text">Hi, I'm <b>Abdullah Shahid Khan</b><span class="cursor">_</span></div> </div>, a software engineer specializing in artificial intelligence with a focus on computer vision and natural language processing.
+            </p>
+            
+            <p>
+                My passion lies at the intersection of technology and creativity. I view software engineering as an art form—requiring practice, patience, and an eye for detail that others might overlook. Like any meaningful craft, it demands dedication to mastery and a constant pursuit of innovation.
+            </p>
+            
+            <p>
+                Beyond coding, I'm deeply curious about various disciplines—philosophy, design, literature, and other creative fields. This interdisciplinary approach enriches my technical work and enables me to see connections others might miss.
+            </p>
+            
+            <p>
+                What drives me is not just the elegance of technology itself, but the tangible impact it can have on the lives around us. I believe in building meaningful solutions that serve real needs rather than chasing technological novelty for its own sake.
+            </p>
+            
+            <p>
+                I enjoy teaching and sharing knowledge—translating complex AI concepts into accessible explanations tailored to each audience. Whether you're a curious beginner or a fellow practitioner, I'd be delighted to engage in thoughtful conversation about technology, art, or where those worlds meet.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" style="margin-left: 1cm;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-top: 50px; margin-bottom: 50px;">
+    <h1 class="section-header">Contact</h1>
+    
+    <div class="social-links" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <a href="https://linkedin.com/in/sh9hid" target="_blank">LinkedIn</a>
+        <a href="https://github.com/sh9hid" target="_blank">GitHub</a>
+    </div>
+    
+    <div class="contact-form">
+        <h3>Get in Touch</h3>
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            
+            <div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+            </div>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+</div> <!--Main div-->
+
+<footer style="border-radius: 20%;padding: 20px; text-align: center; background-color: #f05a3c; margin-top: 30px;">
+    <p style="color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">© 2025 Abdullah Shahid Khan. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
