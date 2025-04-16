@@ -1,8 +1,14 @@
+/*Overall page*/
+
 html {
   scroll-behavior: smooth;
 }
 
+/* Nav bar animation*/
+nav:hover {
+color: #d42700;
 
+}
 nav a {
   transition:transform 0.2s ease, box-shadow 0.1s ease, background-color 0.3s ease;;
   list-style-position: inside;
@@ -11,19 +17,25 @@ nav a {
 nav a:hover {
     color: black;
     transition: all 0.2s ease;
-    transform: scale(2);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transform: scale(6);
+    box-shadow: 0 16px 16px rgba(255, 255, 255, 0.25);
     text-shadow: 0 0 8px rgba(0, 255, 200, 0.5);
     
 }
-
+/* Intro animation header section*/
 #top {
-  transition: transform 0.5s ease;
+  transition: transform 0.1s ease;
 }
 #top:hover {
 
-  transform: (6);
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+  background-color: hsla(11, 82%, 87%, 0.704);
 }
+
+header {
+  justify-content: center;
+ }
 
 header:hover {
     color: black;
@@ -31,16 +43,9 @@ header:hover {
     transition: all 1s ease-in-out;
 }
 
-typewriter-text {
-    overflow: hidden;
-    animation: typing 3s steps(24) 1s 1 normal both;
-}
 
-.cursor {
-    color: #eb4621;
-    animation: blink 0.7s steps(1) infinite;
-}
 
+/*About section typewriter effect and cursor*/
 .typewriter-wrapper {
   display: inline-block;
   font-family: 'Courier New', monospace;
@@ -48,6 +53,17 @@ typewriter-text {
   white-space: nowrap;
   border-right: 0.15em solid #f47e17;
   font-size: 1.8rem;
+}
+
+typewriter-text {
+  overflow: hidden;
+  animation: typing 3s steps(24) 1s 1 normal both;
+}
+
+.cursor {
+  animation: blink 5s steps(1) infinite;
+  color: #d42700;
+  transition: ease-in-out;
 }
 
 .typewriter-text {
@@ -58,13 +74,8 @@ typewriter-text {
   transition: ease-in-out;
 }
 
-.cursor {
-  animation: blink 5s steps(1) infinite;
-  color: #d42700;
-  transition: ease-in-out;
-}
 
-/* Keyframes */
+/* Keyframes for infinite loop */
 @keyframes typing {
   0% {
     width: 0;
@@ -79,7 +90,7 @@ typewriter-text {
     width: 0;
   }
 }
-
+/* Keyframes for cursor blink */
 @keyframes blink {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
@@ -90,6 +101,9 @@ typewriter-text {
   50% { border-color: #00ffcc; }
 }
 
+/* Bookmarks section 
+TODO: Add drop down menus on hover
+*/
 #bookmarks ul li {
 transition: transform 0.2s ease-out;
 }
@@ -99,7 +113,7 @@ transition: transform 0.2s ease-out;
   color: black;
 }
 
-
+/* Project section CSS*/
 #prj {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   padding: 12px;
@@ -115,3 +129,14 @@ transition: transform 0.2s ease-out;
   background-color: #2b2b2b;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
+
+
+#github {
+  transition: transform 0.;
+}
+
+#github:hover {
+  transform: scale(1.05);
+}
+
+
