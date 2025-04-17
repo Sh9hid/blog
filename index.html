@@ -39,8 +39,11 @@
 <!--Intro and Navbar-->
 <div id="top">
     <div id="heading">
-<header>
-    <h1> Aura Farm for Shahid </h1> <sub>
+<header> 
+    <div style="display: flex; flex-direction: row;justify-content: center; margin: 5px;">
+    <img src="farm.svg" style="width: 10%; height: 10%; border-radius: 50%; ">
+    <h1> Aura Farm for <a href="#about" style="color: #4d4d4d;">Shahid</a> </h1> <sub>
+    </div>
         <div style="display: flex; justify-content: center; flex-wrap: wrap; flex-flow: row;" >
             <p style="height: 50%; width: 50%;"><i>color-theme inspired by <a href="https://news.ycombinator.com/newest">hn</a></i>
             <img src="hackernews.svg" style="height: 2.5%; width: 2.5%; border-radius:50%">
@@ -52,17 +55,11 @@
 </br> 
 <div id="nav-bar">
     <nav>
-        <ul>
-            <a href="#blog">Thoughts</a>
-        </ul>
-        <ul>
-            <a href="#projects">Projects</a>
-        </ul> 
-        <ul>
-            <a href="#about">About</a>
-        </ul>
-        <ul>
-            <a href="#contact">Contact</a>
+        <ul style="display: flex; justify-content: space-around; width: 100%; list-style: none;">
+            <li><a href="#blog">Thoughts</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         
     </nav>    
@@ -126,40 +123,73 @@
       </svg>
       
 </div>
-<P>A list tracking blog-posts, articles that I am currently interested to see.
-</P>
-<ol>
-    <b><li>Research Papers</li></b>
-        <ul>
-            <li><a href="https://www.paperswithcode.com" style="color: fuchsia;">PapersWithCode</a></li>
-            <li><a href="https://arxiv.org/pdf/2305.09636.pdf" style="color: fuchsia;">SoundStorm</a></li>
-            <li><a href="https://d1qx31qr3h6wln.cloudfront.net/publications/Nemotron_4_340B_8T.pdf" style="color: fuchsia;">Nemotron-4 340B</a>
-        </ul>
-    <b><li>Blogs </li></b>
-        <ul>
-        <li><a href="https://distill.pub/" style="color: fuchsia;">DistillPub - Visualisation</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant" style="color: fuchsia;">Jacobian Matrix and Determinant</a></li>
-        <li><a href="http://catb.org/" style="color: fuchsia;">Eric Raymond</a></li>
-        <li><a href="https://vadimkravcenko.com" style="color: fuchsia;">Vadim</a></li>
-        <li><a href="https://www.onestopmba.com/blog" style="color: fuchsia;">One Stop MBA</a>
-        </ul>
-    </li>
-    <b><li>Books</li></b>
-        <ul>
-            <li><a href="http://incompleteideas.net/book/RLbook2020.pdf" style="color: fuchsia;">RL</a></li>
-            <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/" style="color: fuchsia;">Data Science Handbook</a>
-        </ul>
-    </li>
-    <b><li>Cool Stuff</li></b>
+<p>A list tracking blog-posts, articles that I am currently interested to see.</p>
+
+<style>
+    summary {
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+
+    a {
+        color: fuchsia;
+        text-decoration: none;
+    }
+
+    ul {
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    details {
+        margin-bottom: 10px;
+    }
+</style>
+
+<details>
+    <summary>Research Papers</summary>
     <ul>
-        <li ><a href="https://www.shadertoy.com" style="color: fuchsia;">Shader Geometry</a></li>
-        <li ><a href="https://www.nvidia.com/en-us/ai"; style="color: fuchsia;">NVIDIA NIM</a></li>
-        <li><a href="https://github.com/Sh9hid/PrepAtlas.git" style="color: fuchsia;">PrepAtlas</a>
+        <li><a href="https://www.paperswithcode.com">PapersWithCode</a></li>
+        <li><a href="https://arxiv.org/pdf/2305.09636.pdf">SoundStorm</a></li>
+        <li><a href="https://d1qx31qr3h6wln.cloudfront.net/publications/Nemotron_4_340B_8T.pdf">Nemotron-4 340B</a></li>
     </ul>
-</ol>
+</details>
+
+<details>
+    <summary>Blogs</summary>
+    <ul>
+        <li><a href="https://distill.pub/">DistillPub - Visualisation</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant">Jacobian Matrix and Determinant</a></li>
+        <li><a href="http://catb.org/">Eric Raymond</a></li>
+        <li><a href="https://vadimkravcenko.com">Vadim</a></li>
+        <li><a href="https://www.onestopmba.com/blog">One Stop MBA</a></li>
+    </ul>
+</details>
+
+<details>
+    <summary>Books</summary>
+    <ul>
+        <li><a href="http://incompleteideas.net/book/RLbook2020.pdf">RL</a></li>
+        <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Data Science Handbook</a></li>
+    </ul>
+</details>
+
+<details>
+    <summary>Cool Stuff</summary>
+    <ul>
+        <li><a href="https://www.shadertoy.com">Shader Geometry</a></li>
+        <li><a href="https://www.nvidia.com/en-us/ai">NVIDIA NIM</a></li>
+        <li><a href="https://github.com/Sh9hid/PrepAtlas.git">PrepAtlas</a></li>
+    </ul>
+</details>
+
 </div>
 
 <!--Projects-->
+<div class="blog-post">
 <div id="projects" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
 
     <h1 class="section-header">Projects</h1>
@@ -262,9 +292,11 @@
 
     </ol>
 </div>
-
+</div>
 <!--Blogposts-->
 <!--Blog title style-->
+
+<div class="blog-post">
 <div id="blog" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex; align-items: center;">
 
     <h1 class="section-header">Essays</h1>
@@ -273,79 +305,284 @@
 
 <h3 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex; justify-content: left;">A curated list of content that I've posted on the internet.</h3>
  
-<!--Blog posts -->
-<div>
-        <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><li>AI Agents: The Future of Work or Just Hype?</li><sub style="background-color: aqua; display: flex; width: 50%; "> April 2025</sub></h2>
-        <p><i style="color: rgb(205, 210, 210);">#ai, #pwl, #deeplearning </i></p>
-    <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-</div>
-<div style="display: flex; flex-wrap: wrap; justify-content:center;">
-    <img src="gpt.png" style="width: 50%; height: 50%;">
-</div>
-<br>
-    <i>
-        I've been using AI agents for mostly, saving myself from the pitfalls of doom-scrolling, on mind-numbing, soul-sucking, overstimulating apps on the internet and by doing little menial tasks at work. <br>
+<details class="blog-post" style="margin: 30px auto; border: 1px solid #f8f7d0; padding: 20px; border-radius: 10px;box-shadow: 0 0 10px rgba(0,0,0,0.05); ">
+    <summary style="cursor: pointer; font-size: 1.3em; font-weight: bold; list-style: none;">
+        <h2><li>AI Agents, The Future of Work or Hype?</li></h2>
+        <sub style="display: block; font-size: 0.8em; color: gray;">April 2025</sub>
+        <p class="tags" style="margin-top: 5px; font-size: 0.9em; color: #ff00ff;">#ai, #pwl, #deeplearning</p>
+    </summary>
 
+    <img src="gpt.png" style="width: 50%; height: auto; display: block; margin: 10px auto;" alt="AI Image">
+
+    <p style="font-style: italic;">
+        I've been using AI agents for mostly, saving myself from the pitfalls of doom-scrolling, on mind-numbing, soul-sucking, overstimulating apps on the internet and by doing little menial tasks at work. <br><br>
 
         It's very cool to have a team of LLMs co-working together on the roles you've assigned them, and exactly as requested. <br>
-        
         It's a much higher compute for smaller tasks but, I still like the idea of having some local support on taking care of any extra overhead, if needed be. <br>
-        
-        These aren't just a bunch of fancy LLMs working in collaboration instead, are in fact, a different approach to problem solving. <br>
-        
+        These aren't just a bunch of fancy LLMs working in collaboration — instead, they are a different approach to problem solving. <br>
         In our normal procedural programming era this will need a bit of getting used to. <br>
-        
-        As we shift from writing out instructions to a machine, to managing our newly employed autonomous models that will work and do the task based on their understanding. <br>
-        
+        As we shift from writing out instructions to a machine, to managing our newly employed autonomous models that will work and do the task based on their understanding. <br><br>
+
         Give them clear, coherent roles, and they're accurate. <br>
         Give them time, and they evolve. <br>
-        Give them tools, and they scale. <br>
-        
-        The pay out is a completely new surface area of problems we can tackle and the solutions we could approach. <br>
-        
+        Give them tools, and they scale. <br><br>
+
+        The payout is a completely new surface area of problems we can tackle and the solutions we could approach. <br>
         Agentic frameworks like CrewAI are good, simple, lowering the barrier to complex workflows. <br>
-        
-        Easy enough for a high-schooler to be automating their social media. <br>
-        To a single-person running an agency outcompeting a team, and all the way up to businesses and governments delivering faster, better reliable solutions. <br>
-        
-        The difference isn't just of productivity, but, of ambition. <br>
-        
-        That being said, a (huge) problem with AI Agent Systems are that they don't exactly work (at least of what I was expecting)
-        
-        To go as far as saying, it can take up complete cognition, seamless task hand-offs, perfect multi-step memory management is not just there yet.
-        We have a long way to go.
-        
-        For instance, while AI agents like CrewAI are great at automating social media posts or scheduling meetings, they still struggle with more complex, multi-step workflows.
-        
-        An AI that is supposed to handle a task from start to finish often hits a roadblock when trying to make decisions based on incomplete data or when task hand-offs between agents aren't smooth.
-        
-        This lack of context retention, coupled with an inability to fully understand nuances, limits more sophisticated use cases, like sales or decision-making in a high-stakes environment.
-        
-        We're early, but the future of our work leans agentic. <br>
-        
-        
-        It's an interesting era for problem solving as software engineers get more room to focus on strategy, creativity, and focus on better generalized systems instead. <br>
-        
+        Easy enough for a high-schooler to be automating their social media, to a single-person running an agency outcompeting a team, and all the way up to businesses and governments delivering faster, better reliable solutions. <br><br>
+
+        The difference isn't just of productivity, but, of ambition. <br><br>
+
+        That being said, a (huge) problem with AI Agent Systems is that they don't exactly work (at least not the way I was expecting). <br><br>
+
+        To go as far as saying it can take up complete cognition, seamless task hand-offs, perfect multi-step memory management — we're not quite there yet. <br>
+        We have a long way to go. <br><br>
+
+        For instance, while AI agents like CrewAI are great at automating social media posts or scheduling meetings, they still struggle with more complex, multi-step workflows. <br>
+        An AI that is supposed to handle a task from start to finish often hits a roadblock when trying to make decisions based on incomplete data or when task hand-offs between agents aren't smooth. <br><br>
+
+        This lack of context retention, coupled with an inability to fully understand nuances, limits more sophisticated use cases, like sales or decision-making in a high-stakes environment. <br><br>
+
+        We're early, but the future of our work leans agentic. <br><br>
+        It's an interesting era for problem solving, as software engineers get more room to focus on strategy, creativity, and building better generalized systems. <br><br>
+
         In some ways, we're no longer writing software. <br>
-        
-        We're engineering management itself. <br>
+        We're engineering management itself.
+    </p>
+
+    <h3 style="margin-top: 30px;">AI Agent in Action</h3>
+    <video class="local-video" controls style="width: 100%; max-width: 640px; display: block; margin: 10px auto;">
+        <source src="Recording 2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="video-caption" style="text-align: center; font-size: 0.9em;">A demonstration of my custom AI agent handling multi-step RAG task.</p>
+</details>
+
+
+<!-- Blog Post 2 -->
+<details class="blog-post" style="margin: 30px auto; border: 1px solid #f8f7d0; padding: 20px; border-radius: 10px;box-shadow: 0 0 10px rgba(0,0,0,0.05); ">
+    <summary style="cursor: pointer; font-size: 1.3em; font-weight: bold; list-style: none;">
+    <h2><li>Pour more, drink less</li></h2>
+    <sub style="display: block; font-size: 0.8em; color: gray;">Jan 2025</sub>
+    <p class="tags" style="margin-top: 5px; font-size: 0.9em; color: #ff00ff;">#life, #productivity, #mba</p>
+</summary>
+<img src="drink.jpg" style="width: 20%; height:20%; display: block; margin: 10px auto;" alt="AI Image">
+    <p>
+        <i>
+       
+        Knowledge is only potential.
+        <br>
+        Those who act upon this knowledge get fulfillment from its achievement. That is true power.
+        <br>
+        In the click of a button, we now know more than the people of the past ever knew or needed to know.
+        <br>
+        Things we could use.<br>
+        Countries we could travel, cultures we could see.
+        <br>
+        We have more information (underlying potential) than we can act upon, resulting in more wasted potential.
+        <br>
+        This creates a feeling of dread, making it harder to even begin.
+        <br>
+        The start always has to be messy.
+        <br>
+        The less you know, the less you would care about the result assuming you're likely doing something right.
+        <br>
+        Every pro was once an amateur.<br>
+        It's easier to get going first, rather thinking about the potential of the outcome and never getting started.
+        <br>
+  
     </i>
     </p>
-    <div style="justify-content: center; width: 50%; height: 50%; justify-content: center; ">            <!-- Local Video -->
-        <h3 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">AI Agent in Action</h3>
-        <video class="local-video" controls>
-            <source src="Recording 2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <p class="video-caption">A demonstration of my custom AI agent handling multi-step RAG task.</p>
-    </div>
-</div>
+</details>
 
+<!-- Blog Post 3 -->
+<details class="blog-post" style="margin: 30px auto; border: 1px solid #f8f7d0; padding: 20px; border-radius: 10px;box-shadow: 0 0 10px rgba(0,0,0,0.05); ">
+    <summary style="cursor: pointer; font-size: 1.3em; font-weight: bold; list-style: none;">
+      <h2><li>Al Asr: An Ode to Time</li></h2>
+        <sub style="display: block; font-size: 0.8em; color: gray;">Nov 2024</sub>
+    <p class="tags" style="margin-top: 5px; font-size: 0.9em; color: #ff00ff;">#writing, #philosophy, #journal</p>
+</summary>
+    <img src="time.jpg" style="width: 20%; height: 20%; display: block; margin: 10px auto;" alt="AI Image">
+    <p>
+        <i>
+            Looking at a foggy morning. 
+            <br>
+            Everything can be earned, your best version of your self with everything that you long for, except time. 
+            <br>
+            I often forget how real wealth is time.
+            <br>
+            You can know all there is to know about everything, have everything in the world. Not just yet.
+            <br>
+            Time you can’t get back.
+            <br>
+            There are things you can do, only at the price of something else.
+            <br>
+            Once you sell out, there’s no going back.
+            <br>
+            What you decide on doing with your time is the only differentiating factor between you and others.
+            <br>
+            Rich people use their time more effectively. 
+            <br>
+            It’s the only commodity they’re wary of.
+            <br>
+            Rest you can always earn back.
+            <br>
+            We equate having money, to the quality of our lives.
+            <br>
+            Time is the real commodity and we can be rich when we’re older.
+            <br>
+            The only thing that’s changed is the time.
+            <br>
+            You can live your life with quality. But starting when? 
+            <br>
+            How long? 
+            <br>
+            Our brain registers memory of new experiences. The time spent being average is not going to be remembered either way. Do good.
+            <br>
+            The times we’re in love, we register something for a long time.
+            <br>
+            It dilates time. 
+            <br>
+            We’re all longing to be loved. We yearn for money, to have love. The most quality use of our time.
+            <br>
+            A man’s value is the amount of support he can provide in his time.
+            <br>
+            The bag, comes from being mindful of your time. 
+            <br>
+            With the bag, comes love. 
+            <br>
+            With love, comes reminder of being thankful.
+            <br>
+            With being content and praying to god, comes a good life and the hereafter.
+            <br>
+            You can be anything. The best version of yourself is waiting out there.
+            <br>
+            In an alternate universe, there exists this version of you. 
+            <br>
+            For now, it is only a possibility. 
+            <br>
+            The only question is when or whether or not. 
+            <br>
+            It all circles back to how you make use of your time.
+            <br>
+            Don’t be heedless of what you see or hear.
+            <br>
+            Don’t spend it so cheap. 
+            <br>
+            Make it clear, you’re here to support and give and not to leech of what’s been offered to you like an ingrate.
+            <br>
+            I envy people with purpose.
+            <br>
+             The content creators. 
+             <br>
+            The people who have plans for the coming weeks. 
+            <br>
+            I can’t even decide what to do today.
+            <br>
+            If I had a camera, I’d know what I want to create and do to earn my bread. 
+            <br>
+            But you have everything, doing more in less is excellence.
+            <br>
+            Doing less with more, is being excessive.
+            <br>
+            Decide on what you want to put out, make a shot list. To-do today list. 
+            <br>
+            Set a definite time for getting it done. Long lists - goals and targets. Short lists - today, tomorrow. 
+            <br>
+            Lists help you decide what is the most apt use of your time. 
+            <br>
+            Try on what is the most impactful, something that is just above your comfort zone.
+            <br>
+            Get it done. 
+            <br>
+            Define what you mean by “your calling”, purpose. Make a list. 
+            <br>
+            Quantize what makes it good. What makes it less than good.
+            <br>
+            Numbers and list, help you analyze your time.
+            <br>
+            The reason why you spend your time recklessly, is because you don’t have a convincing list.
+            <br>
+            By convincing, I mean the intent. The intent guides you through the process.
+            <br>
+            You can do quality work, when you exactly know why and how much and in what time can it come to fruition. 
+            <br>
+            The results come after the process is finished. The intent decides how much energy is worth using.
+            <br>
+            If it really matters, which it does.
+            <br>
+            You have duties as a man. How good of a duty you do depends on your system (lists, numbers, intent, writing, introspection) and the quality of work you’re able to achieve with your time. 
+            <br>
+            Write down your problems and they are almost solved.
+            <br>
+            Make a list, on everything.
+            <br>
+            Measure it everyday. You can almost see progress.
+            <br>
+            Rely on not the dunya, it’s knowledge, it’s stimulations. 
+            <br>
+            Rely only on your creator. 
+            <br>
+            Remember, you’re trying to please your creator and not the world.
+            <br>
+            He only knows the things you can’t see. Even if you don’t make it, He knows what’s best.
+            <br>
+            Rely only on Allah. Ask Him to help. He’s the only One that can help.
+            <br>
+            Being mindful of Him, makes each second worth living and keeps you mindful of now.
+            <br>
+            Allah made time. 
+            <br>
+            The countdown set, a good reminder that you’re going to return to Him.
+            <br>
+            We’re so consummated with external stimulation. We often forget.
+            <br>
+            The morning time is introspective.
+            <br>
+            You look around you and appreciate what’s been offered to you for free. 
+            <br>
+            Be mindful and do good, that is being grateful. That is the actual use of your time.
+            <br>
+            
+    </i>
+    </p>
+</details>
+
+
+<!-- Blog Post 4 -->
+<details class="blog-post" style="margin: 30px auto; border: 1px solid #f8f7d0; padding: 20px; border-radius: 10px;box-shadow: 0 0 10px rgba(0,0,0,0.05); ">
+    <summary style="cursor: pointer; font-size: 1.3em; font-weight: bold; list-style: none;">
+      <h2><li>Organize your life like a business.</li></h2>
+        <sub style="display: block; font-size: 0.8em; color: gray;">July 2024</sub>
+    <p class="tags" style="margin-top: 5px; font-size: 0.9em; color: #ff00ff;">#productivity, #advice, #journal</p>
+</summary>
+    <img src="new-york-city-skyline-black-and-white.webp" style="width: 20%; height: 20%; display: block; margin: 10px auto;" alt="AI Image">
+    <p>
+        <i>
+            Like, in any workplace. There has to be something that is an indicator of performance in your personal life. There are things that you can do to make it easier for yourself to improve. It’s the systems that make all the difference. 
+            <br>
+                        <br>
+            Then, there are targets. Targets for the month for the entire team and you divide it to your own personal target.
+            <br>
+            Like, a business we have certain objectives in your life. Although our lives are dynamic and it’s hard to make a single objective but as the book, “The One Thing” suggests. You can’t do a lot of things in life. But you can do one, and the next. 
+            <br>
+            Let’s not judge outcomes but the trajectory of where we’re headed. The outcome is depended on the system, the process. No matter where you are.
+            <br>
+            If you’re extremely good-looking, super-rich but your day starts with smoking and spending more money than you earn in a day. You’re obviously not going to be good-looking and rich for a very long time. 
+            <br>
+            Looking at the trajectory and in the eyes of time (not your own). You can actually tell what’s good or not. <br>
+            <br>
+        </i>
+    </p>
+</div>
+</details>
 </div>    
 
+</div>
 
 <!--About-->
-<div id="about" style="margin-left:1cm;margin-right:3cm; ;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+<div class="blog-post">
+<div id="about" style="display: flex; flex-wrap: wrap; flex-direction: column;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
 
     <h1 class="section-header">About</h1>
     
@@ -373,60 +610,73 @@
             </p>
             
             <p>
-                I enjoy teaching and sharing knowledge—translating complex AI concepts into accessible explanations tailored to each audience. Whether you're a curious beginner or a fellow practitioner, I'd be delighted to engage in thoughtful conversation about technology, art, or where those worlds meet.
+                I enjoy teaching at times and translating complex AI concepts into accessible explanations tailored to different audiences. Whether you're a curious beginner or a fellow practitioner, I'd be delighted to engage in thoughtful conversation about technology, art, etc.
             </p>
         </div>
     </div>
 </div>
-
+</div>
 <!-- Contact Section -->
+ <div class="blog-post">
 <div id="contact" style="margin-left: 1cm;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-top: 50px; margin-bottom: 50px;">
-    <h1 class="section-header">Contact</h1>
+    <h1 class="section-header" style="background-color: white;">Connect</h1>
     
     <div class="social-links" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <a href="https://linkedin.com/in/sh9hid" target="_blank">
+        <a href="https://linkedin.com/in/sh9hid" target="_blank" class="linkedin">
             <img src="linkedin.webp" alt="LinkedIn Profile" style="height:24px; width:auto;">
         </a>
         <a href="https://github.com/sh9hid" target="_blank" class="github">
-            <img src="icone-github-orange.webp" alt="LinkedIn Profile" style="height:24px; width:auto;">
+            <img src="icone-github-orange.webp" alt="Github Profile" style="height:24px; width:auto;">
         </a>
-        <a href="https://x.com/AbdullahShahidK" target="_blank" class="github">
-            <img src="x.webp" alt="X Profile" style="height:24px; width:auto;">
+        <a href="https://x.com/AbdullahShahidK" target="_blank" class="x">
+            <img src="x.png" alt="X Profile" style="height:24px; width:auto; border-radius: 50%;filter: hue-rotate(5deg) saturate(200%)">
         </a>
     </div>
     
-    <div class="contact-form" style="margin-right: 1cm;">
-        <h3>Get in Touch</h3>
+    <div class="contact-form" style="margin-right: 1cm; ">
         <form action="#" method="POST">
             <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <label for="name"><b>Name</b></label>
+                <br>
+                <input type="text" id="name" name="name" placeholder="Please enter your name" required>
             </div>
             
             <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" name="email" placeholder="Please enter your email" required>
             </div>
             
             <div>
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <label for="subject"><b>Subject</b></label>
+                <input type="text" id="subject" name="subject" placeholder="A short intro should work" required>
             </div>
             
             <div>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                <label for="message"><b>Message</b></label>
+                <textarea id="message" name="message" rows="5" placeholder="Please enter a short message" required></textarea>
             </div>
             
-            <button type="submit">Send Message</button>
+            <button type="submit">Send </button>
         </form>
     </div>
 </div>
+</div>
+
 
 </div> <!--Main div-->
 
-<footer style="border-radius: 20%;padding: 20px; text-align: center; background-color: #f05a3c; margin-top: 30px;">
-    <p style="color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">© 2025 Abdullah Shahid Khan. All rights reserved.</p>
+<footer class="finale" style="border-radius: 20%; padding: 20px; text-align: center; background-color: #f95c3d; margin-top: 30px; color: white;">
+    
+    <div style="margin-bottom: 10px;" class="footer">
+        <p style="margin: 0;">Copyright © 2025 <b>Aura Farm by Abdullah Shahid Khan</b>. <br>
+            All rights reserved.</p>
+        <br>
+        <a href="#top" style="color: white; text-decoration: underline; margin: 0 10px;">↑ Jump to Top</a>
+        <a href="#projects" style="color: white; text-decoration: underline; margin: 0 10px;">Projects</a>
+        <a href="#about" style="color: white; text-decoration: underline; margin: 0 10px;">About</a>
+        <a href="#contact" style="color: white; text-decoration: underline; margin: 0 10px;">Contact</a>
+    </div>
+
 </footer>
 
 </body>
