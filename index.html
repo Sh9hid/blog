@@ -41,15 +41,18 @@
     <div id="heading">
 <header> 
     <div style="display: flex; flex-direction: row;justify-content: center; margin: 5px;">
-    <img src="farm.svg" style="width: 10%; height: 10%; border-radius: 50%; ">
-    <h1> Aura Farm for <a href="#about" style="color: #4d4d4d;">Shahid</a> </h1> <sub>
+        <img src="farm.svg"
+        style="width: 10%; height: 10%; border-radius: 50%; transition: transform 1s;"
+        ondblclick="this.style.transform = 'rotate(360deg)'; setTimeout(() => this.style.transform = 'rotate(0deg)', 1000);">
+   
+        <h1> Aura Farm for <a href="#about" style="color: #4d4d4d;">Shahid</a> </h1> <sub>
     </div>
         <div style="display: flex; justify-content: center; flex-wrap: wrap; flex-flow: row;" >
             <p style="height: 50%; width: 50%;"><i>color-theme inspired by <a href="https://news.ycombinator.com/newest">hn</a></i>
             <img src="hackernews.svg" style="height: 2.5%; width: 2.5%; border-radius:50%">
         </p>
         </div>
-    <p><i>Blogs aimed at topics that I find interesting for now. <br>Primarily on tech, art, books and life in general.</i><p> 
+    <p><i>Blog aimed at topics that I find interesting for now. <br>Primarily on tech, art, books and life in general.</i><p> 
 </header>
 </div>
 </br> 
@@ -298,9 +301,10 @@
 
 <div class="blog-post">
 <div id="blog" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex; align-items: center;">
-
+    <div>
+        
+    </div>
     <h1 class="section-header">Essays</h1>
-    <img src="speech-bubble.png" style=" height: 5%; width: 5%;">
 </div>
 
 <h3 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex; justify-content: left;">A curated list of content that I've posted on the internet.</h3>
@@ -581,12 +585,12 @@
 </div>
 
 <!--About-->
-<div class="blog-post">
-<div id="about" style="display: flex; flex-wrap: wrap; flex-direction: column;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+<div class="blog-post" style="background-color: #fde7d7b2;">
+<div id="about-section">
 
-    <h1 class="section-header">About</h1>
+    <h1 class="section-header" style="background-color:#ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">About</h1>
     
-    <div class="about-container" style="display: flex;">
+    <div class="about-container" style="display: flex; flex-wrap: wrap; width: fit-content;">
         <div class="about-image">
             <img src="dp.jpeg" alt="Abdullah Shahid Khan">
         </div>
@@ -631,6 +635,9 @@
         <a href="https://x.com/AbdullahShahidK" target="_blank" class="x">
             <img src="x.png" alt="X Profile" style="height:24px; width:auto; border-radius: 50%;filter: hue-rotate(5deg) saturate(200%)">
         </a>
+        <a href="https://goodreads.com/Sh9hid" target="_blank" class="x">
+            <img src="goodreads.png" alt="Goodreads Profile" style="height:50%; width:50%;filter: hue-rotate(-30deg) saturate(200%)">
+        </a>
     </div>
     
     <div class="contact-form" style="margin-right: 1cm; ">
@@ -667,14 +674,15 @@
 
 <footer class="finale" style="border-radius: 20%; padding: 20px; text-align: center; background-color: #f95c3d; margin-top: 30px; color: white;">
     
-    <div style="margin-bottom: 10px;" class="footer">
-        <p style="margin: 0;">Copyright © 2025 <b>Aura Farm by Abdullah Shahid Khan</b>. <br>
-            All rights reserved.</p>
+    <div style="margin-bottom: 5px;" class="footer">
         <br>
-        <a href="#top" style="color: white; text-decoration: underline; margin: 0 10px;">↑ Jump to Top</a>
-        <a href="#projects" style="color: white; text-decoration: underline; margin: 0 10px;">Projects</a>
-        <a href="#about" style="color: white; text-decoration: underline; margin: 0 10px;">About</a>
-        <a href="#contact" style="color: white; text-decoration: underline; margin: 0 10px;">Contact</a>
+        <div class="footer-links">
+        <a href="#top" style="color: rgb(0, 0, 0); text-decoration: underline; margin: 0 10px;">↑ Jump to Top</a>
+        <a href="#projects" style="color: rgb(0, 0, 0); text-decoration: underline; margin: 0 10px;">Projects</a>
+        <a href="#about" style="color: rgb(0, 0, 0); text-decoration: underline; margin: 0 10px;">About</a>
+        <a href="#contact" style="color: rgb(0, 0, 0); text-decoration: underline; margin: 0 10px;">Contact</a>
+    </div>
+        <p style="margin-top: px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>Copyright © 2025 Aura Farm by Abdullah Shahid Khan</b> <br>All rights reserved.</p>
     </div>
 
 </footer>

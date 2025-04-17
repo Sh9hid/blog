@@ -10,15 +10,15 @@ color: #d42700;
 
 }
 nav a {
-  transition:transform 0.2s ease, box-shadow 0.1s ease, background-color 0.3s ease;
-  list-style-position: inside;
+  transition:transform 0.4s ease, box-shadow 0.1s ease, background-color 0.3s ease;
+  /* list-style-position: inside; */
 
 }
 nav a:hover {
     color: black;
     transform: scale(6);
-    box-shadow: 0 16px 16px rgba(255, 255, 255, 0.25);
-    text-shadow: 0 0 8px rgba(0, 255, 200, 0.5);
+    box-shadow: 0 16px 16px rgba(255, 255, 255, 0.678);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.775);
     
 }
 /* Intro animation header section*/
@@ -84,6 +84,40 @@ header:hover {
 
 
 /*About section typewriter and cursor animation*/
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-image img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 600px) {
+  .about-section {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  .about-image img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .typewriter-wrapper {
   display: inline-block;
   font-family: 'Courier New', monospace;
@@ -93,7 +127,7 @@ header:hover {
   font-size: 1.8rem;
 }
 
-typewriter-text {
+.typewriter-text {
   overflow: hidden;
   animation: typing 3s steps(24) 1s 1 normal both;
 }
@@ -237,3 +271,11 @@ typewriter-text {
       font-size: 0.9em;
       color: gray;
   }
+
+  .finale {
+    background-color: #f0f0f0;
+  }
+
+  /* Footer links effects */
+
+ 
