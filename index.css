@@ -129,7 +129,7 @@ header:hover {
 
 .typewriter-text {
   overflow: hidden;
-  animation: typing 3s steps(24) 1s 1 normal both;
+  animation: typing 3s steps(11) 1s 1 normal both;
 }
 
 .cursor {
@@ -140,7 +140,7 @@ header:hover {
 
 .typewriter-text {
   display: inline-block;
-  animation: typing 3s steps(30) 1s infinite,
+  animation: typing 3s steps(11) 1s infinite,
              blink-caret 5s step-end infinite;
   overflow: hidden;
   transition: ease-in-out;
