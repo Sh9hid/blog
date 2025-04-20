@@ -1,7 +1,7 @@
 ## Inspiration
 
 1. The color orange was inspired by Hackernews.
-2. The idea was to feel confident after looking at my careers and interest in one page.
+2. The idea was to farm some aura after looking at my careers and interest in on a single page.
 
 ## Challenges faced
 1. Nothing rhymes with orange - Hard to find matching logos and match colors with the chosen accent color.
