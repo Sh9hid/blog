@@ -10,3 +10,8 @@
 4. Finishing the assignment requirements while keeping a minimal theme.
 
 Hope you like it. Thanks
+
+
+# TO DO
+
+1. Organize directory in better structure.
