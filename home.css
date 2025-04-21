@@ -1,0 +1,184 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #313131;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    display: inline-block;
+    padding:0.5rem;
+    transition: transform 0.3s ease;
+
+  }
+  
+  .nav-links a:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    color: #fc941d;
+  }
+  
+  .toggle-mode {
+    cursor: default;
+  }
+  
+  /* Home Section */
+  .home-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 20px;
+    /* background: linear-gradient(to right, #0f2027, #a06954, #aa8869); */
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .home-content {
+    max-width: 600px;
+  }
+  
+  .home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .home-content span {
+    color: #ff9914;
+  }
+  
+  .home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    margin-right: 15px;
+    display: inline-block;
+    /* width: 30px; */
+    /* height: 30px; */
+  }
+  
+  .social-icons img {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  
+  /* Profile Image with Animation */
+  .profile-img img {
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid hsl(29, 69%, 51%);
+    animation: floatImage 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatImage {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light/Dark Themes */
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  /* background-color: var(--bg-color); */
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.toggle-dark {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Full page hero section */
+.full-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* offset navbar height */
+}
+
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+

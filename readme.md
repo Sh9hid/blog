@@ -14,4 +14,11 @@ Hope you like it. Thanks
 
 # TO DO
 
-1. Organize directory in better structure.
+1. Organize directory in better structure. (Done)
+2. Resume button on hover.
+3. Create home section. Different about me section and home section - also, containing image and intro + social icons. (done)
+4. True dark mode, toggle switch.
+5. Media queries for ipad, devices,etc. 
+6. Card view highlights on hover. (preferrable pink outline)
+7. Skills section should contain linear progreess bar or circular progress indicator. 
+8. Fix all errors. 
