@@ -22,3 +22,8 @@ Hope you like it. Thanks
 6. Card view highlights on hover. (preferrable pink outline)
 7. Skills section should contain linear progreess bar or circular progress indicator. 
 8. Fix all errors. 
+
+
+# TODO :
+1. Nav bar - fix color. 
+2. Hero section background. 
