@@ -4,6 +4,9 @@
   --card-bg: #f5f5f5;
   --btn-bg: #007bff;
   --btn-color: #ffffff;
+  --hover-color: #2b2b2b;
+  --hover-hover-color: #ffffff;
+
 }
 
 .dark {
@@ -12,6 +15,8 @@
   --card-bg: #1e1e1e;
   --btn-bg: #bb86fc;
   --btn-color: #000000;
+  --hover-color:#ffffff;
+  --hover-hover-color: #000000;
 }
 
 
@@ -66,7 +71,6 @@ header:hover {
 
 /* Bookmarks dropdown links */
   /* Dropdown styles */
-  
 #bookmarks ul li {
   transition: transform 0.2s ease-out;
   }
@@ -120,15 +124,15 @@ header:hover {
 }
 #prj:hover {
   transform: scale(1.24);
-  background-color: #2b2b2b;
-  color: white;
+  background-color: var(--hover-color);
+  color: var(--hover-hover-color);
   max-width: 100%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   #prj,
   nav a,
   #prj:hover,
@@ -137,4 +141,69 @@ header:hover {
     margin-right: 10%;
     margin-left: 10%;
   }
+}
+
+@media (min-width:750px){
+.home-section {
+  width: 70vw;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+
+}
+
+}
+
+
+@media (max-width: 410px) {
+  .home,.social-icons, .button-85 {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    flex-shrink: 2;
+    /* margin-bottom: 20vh; */
+
+  }
+  .button-85 {
+  }
+  .logo {
+    display: none;
+  }
+  #bookmarks {
+  display: none;
+
+  }
+ 
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 2;
+    flex-direction: column;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  nav a:hover {
+    
+    /* transform: none; */
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  
+}
+
+@media (max-width: 300px) {
+  .home-content, #certificates {
+    display: flex;
+    /* background-color: #d42700; */
+    width: 100vw;
+    flex-direction: column;
+
+  }
+
 }

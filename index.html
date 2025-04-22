@@ -32,7 +32,7 @@
         .social-links a { text-decoration: none; color: #f05a3c; font-weight: bold; }
         .social-links a:hover { text-decoration: underline; }
         #nav-bar { background-color: #f05a3c;}
-        #bookmarks { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+        #bookmarks { margin-left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
         #bookmarks ul {list-style-type: none;}
         #heading {font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
         .about-container { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
@@ -51,34 +51,33 @@
 </head>
 
 <body>
-    <button id="toggle-theme" class="button">Toggle Dark Mode</button>
-
-<!--Intro and Navbar-->
-<div id="top">
-    <div id="heading">
-<header> 
     
-    <div style="display: flex; flex-direction: row;justify-content: center; margin: 5px;">
-        <img src="assets/farm.svg"
-        style="width: 10%; height: 10%; border-radius: 50%; transition: transform 1s;"
-        ondblclick="this.style.transform = 'rotate(360deg)'; setTimeout(() => this.style.transform = 'rotate(0deg)', 1000);">
-   
-        <h1> Aura Farm for <a href="#about" style="color: #4d4d4d;">Shahid</a> </h1> <sub>
-    </div>
-        <div style="display: flex; justify-content: center; flex-wrap: wrap; flex-flow: row;" >
-            <p style="height: 50%; width: 50%;"><i>color-theme inspired by <a href="https://news.ycombinator.com/newest">hn</a></i>
-            <img src="assets/hackernews.svg" style="height: 2.5%; width: 2.5%; border-radius:50%">
-        </p>
-        </div>
-    <p><i> Aimed at things that I find interesting for now. <br>Primarily on tech, art, books and life in general. <br>
-    This is where my tech-aura is currently being farmed. </i><p> 
-          
-</header>
-</div>
-</br> 
-<div id="nav-bar">
-    <nav>
-        <ul style="display: flex; justify-content: space-around; width: 100%; list-style: none;">
+    <!--Intro and Navbar-->
+    <div id="top">
+        <div id="heading">
+            <header> 
+                
+                <div style="display: flex; flex-direction: row;justify-content: center; margin: 5px;">
+                    <img src="assets/farm.svg"
+                    style="width: 10%; height: 10%; border-radius: 50%; transition: transform 1s;"
+                    ondblclick="this.style.transform = 'rotate(360deg)'; setTimeout(() => this.style.transform = 'rotate(0deg)', 1000);">
+                    
+                    <h1> Aura Farm for <a href="#about" style="color: #4d4d4d;">Shahid</a> </h1> <sub>
+                    </div>
+                    <div style="display: flex; justify-content: center; flex-wrap: wrap; flex-flow: row;" >
+                        <p style="height: 50%; width: 50%;"><i>color-theme inspired by <a href="https://news.ycombinator.com/newest">hn</a></i>
+                            <img src="assets/hackernews.svg" style="height: 2.5%; width: 2.5%; border-radius:50%">
+                        </p>
+                    </div>
+                    <p><i> Aimed at things that I find interesting for now. <br>Primarily on tech, art, books and life in general. <br>
+                        This is where my tech-aura is currently being farmed. </i><p> 
+                            
+                        </header>
+                    </div>
+                </br> 
+                <div id="nav-bar">
+                    <nav>
+                        <ul style="display: flex; justify-content: space-around; width: 100%; list-style: none;">
             <li><a href="#home">Home</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#blog">Thoughts</a></li>
@@ -94,10 +93,11 @@
 <!-- Hero Section (Header + Home Section) -->
 <div class="hero">
     <!-- Header / Navbar -->
-    <header class="navbarz">
+    <header class="navbarz" style="display:flex; background-color: var(--bg-color); color: var(--text-color);">
         
-      <div class="logo">Shahid</div>
-      <nav>
+        <div class="logo">Shahid</div>
+        <nav>
+            <button id="toggle-theme" class="button">Toggle Dark Mode</button>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#blog">Essays</a></li>
@@ -113,43 +113,45 @@
   
     <!-- Home Section -->
     <section id="home" class="home-section">
+
       <!-- Animated Profile Image -->
       <div class="profile-img">
         <img src="assets/dp.jpeg" alt="Profile Picture">
       </div>
-        <div class="home-content">
+      
+    <div class="home-content">
         
-        <h1>Hello, I'm <span>Abdullah Shahid Khan</span></h1>
+        <h1>Hi, It's <span>Abdullah Shahid Khan</span></h1>
         <p>A hollistic software engineer working on artificial intelligence.</p>
   
         <!-- Social Icons -->
         <div class="social-icons" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            
             <a href="https://linkedin.com/in/sh9hid" target="_blank" class="linkedin">
                 <img src="assets/linkedin.webp" alt="LinkedIn Profile" style="height:24px; width:auto;">
             </a>
+
             <a href="https://github.com/sh9hid" target="_blank" class="github">
                 <img src="assets/icone-github-orange.webp" alt="Github Profile" style="height:24px; width:auto;">
             </a>
+
             <a href="https://x.com/AbdullahShahidK" target="_blank" class="x">
                 <img src="assets/x.png" alt="X Profile" style="height:24px; width:auto; border-radius: 50%;filter: hue-rotate(5deg) saturate(200%)">
             </a>
+
             <a href="https://goodreads.com/Sh9hid" target="_blank" class="x">
-                <img src="assets/goodreads.png" alt="Goodreads Profile" style="height:4vh; width:vh; hue-rotate(-30deg) saturate(200%)">
+                <img src="assets/goodreads.png" alt="Goodreads Profile" style="height:4vh; width:vh; filter: hue-rotate(-30deg) saturate(250%)">
             </a>
         </div>
-        <br>
-        <br>
-        <!-- Resume Button -->
-
+        <!-- Download resume button -->
         <a href="assets/resume.pdf" download class="button-85"
-        style="display: inline-block; transition: transform 0.3s ease;"
+        style="display: inline-block; transition: transform 0.3s ease; margin-top: 10%;"
         onmouseover="this.style.transform='scale(1.3)';"
         onmouseout="this.style.transform='scale(1)';">
         <i class="fa fa-download"></i> Download Resume
         </a>
-
-  
     </div>
+
     </section>
   </div>
   <br>
@@ -158,7 +160,7 @@
 
 
 <!--Main Div-->
-<div style="display:flex ; flex-direction: column; margin-left: 1cm; margin-right: 1cm;"> 
+<div style="display:flex ; flex-direction: column; margin-left: 1cm;"> 
 
 <!-- Bookmarks-->
 <div id="bookmarks">
@@ -787,6 +789,7 @@
       </div>
     </div>
   </div>
+
 
 
 

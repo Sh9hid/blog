@@ -21,9 +21,12 @@ Hope you like it. Thanks
 5. Media queries for ipad, devices,etc. 
 6. Card view highlights on hover with a image. (preferrable pink outline)
 7. Skills section should contain linear progreess bar or circular progress indicator. 
-8. Fix all errors. 
+8. Fix all html errors. 
 
 
 # TODO :
 1. Nav bar - fix color. 
 2. Make html modular. 
+3. Add toggle button.
+4. Make nav bar sticky. 
+5. Add a logo with the name written
