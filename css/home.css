@@ -52,7 +52,7 @@
     align-items: center;
     padding: 60px 20px;
     /* background: linear-gradient(to right, #0f2027, #a06954, #aa8869); */
-    color: white;
+    color: var(--text-color);
     min-height: 100vh;
   }
   

@@ -7,11 +7,17 @@
       max-width: 800px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      background-color: #fff;
+      background-color: var(--bg-color);
       transition: transform 0.6s ease;
+      box-sizing:border-box;
   }
   .blog-post:hover {
     transform: scale(1.03);
+  }
+
+  .blog-post h1 {
+    background-color: #7feedf85;
+    color: black;
   }
 
   .blog-post h2 {
@@ -54,3 +60,12 @@
       font-size: 0.9em;
       color: gray;
   }
+/* 
+@media (max-width: 500px) {
+    #section-header{
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+
+    }
+}  */

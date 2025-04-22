@@ -60,7 +60,7 @@ body {
 body.dark-mode .theme-toggle label {
   background: #555;
 }
-
+  
 /* CSS */
 .button-85 {
   padding: 0.6em 2em;
@@ -142,6 +142,12 @@ body.dark-mode .theme-toggle label {
   box-sizing: border-box;
 }
 
+.button-85 {
+  transition: all 0.2s ease;
+}
+.button-85:hover {
+  transform: scale(1.25);
+}
 
 
 .glowing-btn {
