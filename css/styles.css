@@ -166,7 +166,7 @@ header:hover {
 
   }
   .button-85 {
-    margin-bottom: 30%;
+    margin-bottom: 10%;
   }
   .logo {
     display: none;
@@ -178,7 +178,9 @@ header:hover {
     margin-top: 50%;
   }
 
- 
+  #certificates {
+    overflow: hidden;
+  }
 
   nav {
     display: flex;
