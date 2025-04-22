@@ -1,0 +1,17 @@
+/* Intro animation header section*/
+#top {
+  transition: transform 0.1s ease;
+}
+#top:hover {
+
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+  background-color: hsla(11, 82%, 87%, 0.704);
+}
+
+#top {
+  display: none;
+}
+#top.show {
+  display: block;
+}

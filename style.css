@@ -28,23 +28,11 @@ nav a:hover {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.775);
     
 }
-/* Intro animation header section*/
-#top {
-  transition: transform 0.1s ease;
-}
-#top:hover {
 
-  transform: scale(1.01);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
-  background-color: hsla(11, 82%, 87%, 0.704);
+.hero {
+  height: 100vh;
 }
 
-#top {
-  display: none;
-}
-#top.show {
-  display: block;
-}
 
 header {
   justify-content: center;
@@ -56,11 +44,6 @@ header:hover {
     transition: all 1s ease-in-out;
 }
 
-
-.hero {
-  height: 100vh;
-  background-color: #1e1e1e;
-}
 
 /* Bookmarks dropdown links */
   /* Dropdown styles */
