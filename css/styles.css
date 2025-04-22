@@ -172,8 +172,11 @@ header:hover {
   }
   #bookmarks {
   display: none;
-
   }
+  .main-div{
+    margin-top: 30%;
+  }
+
  
 
   nav {
