@@ -156,7 +156,7 @@ header:hover {
 }
 
 
-@media (max-width: 410px) {
+@media (max-width: 420px) {
   .home,.social-icons, .button-85 {
     display: flex;
     flex-wrap: wrap;
