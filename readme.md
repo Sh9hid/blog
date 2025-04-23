@@ -15,11 +15,7 @@ Hope you like it. Thanks
 
 # TODO :
 
-3. Add toggle button.
-
-4. Make nav bar sticky. 
-
-1. Nav bar - fix color. 
+12. Add services cards section. 
 
 7. Add a skills section should contain linear progreess bar or circular progress indicator. 
 
@@ -32,4 +28,6 @@ Hope you like it. Thanks
 8. Fix all html errors. 
 2. Make html modular. 
 
-10. 642 media query overlap fix
+10. 642 media query overlap fix.
+
+11. Make footer better.

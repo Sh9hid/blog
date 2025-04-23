@@ -36,10 +36,18 @@ html,body {
 
 
 
-/* Nav bar animation*/
+/* Nav bar*/
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  /* background-color: rgba(255, 255, 255, 0.8); Semi-transparent background */
+  backdrop-filter: blur(10px); /* Creates the blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+
+}
 
 nav:hover {
-
   color: #d42700;
 }
 
