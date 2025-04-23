@@ -31,7 +31,7 @@
     transition: color 0.3s;
     display: inline-block;
     padding:0.5rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s linear;
 
   }
   
@@ -95,8 +95,8 @@
   .profile-img img {
     width: 250px;
     border-radius: 50%;
-    border: 5px solid hsl(29, 69%, 51%);
-    animation: floatImage 3s ease-in-out infinite;
+    border: 5px solid hsl(19, 69%, 51%);
+    animation: floatImage 2s ease-in-out infinite;
   }
   
   @keyframes floatImage {

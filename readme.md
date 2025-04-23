@@ -31,3 +31,5 @@ Hope you like it. Thanks
 
 8. Fix all html errors. 
 2. Make html modular. 
+
+10. 642 media query overlap fix
