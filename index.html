@@ -835,8 +835,9 @@
                 My work lives in the space between structure and story—between clean systems and creative thinking. Whether I'm architecting a model, debugging a weird edge case, or sketching out a new project idea on a whiteboard, I approach it with the same mindset: curious, careful, and quietly obsessed with getting it just right.
             </span></p>
             <br>
-            <button onclick="myFunction()" class="button-85" id="myBtn"><i class="fa fa-download"></i> Read more</button>
-                <br>
+            <button class="button-85" id="myBtn"><i class="fa fa-download"></i> Read more</button>
+
+            <br>
               
                 <!-- <p><em>Read more: projects, writing, experiments, and the stuff that didn’t quite fit in a résumé.</em></p> -->
               </div>
@@ -923,21 +924,6 @@ toggleBtn.addEventListener('click', () => {
 
 
 //   Read more button
-  function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-}
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
