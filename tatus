@@ -1,0 +1,51 @@
+*   [33m4beeab1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Merge temp-save-branch into main, resolved conflicts
+[31m|[m[32m\[m  
+[31m|[m * [33ma920ce9[m[33m ([m[1;32mtemp-save-branch[m[33m)[m skills linear progress bar
+[31m|[m * [33mdab5431[m overflow fix
+* [32m|[m [33maf300a7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m media query
+[32m|[m[32m/[m  
+* [33ma367210[m overflow fix
+* [33m6600729[m new blog added
+*   [33m7ba74f7[m signature fix
+[33m|[m[34m\[m  
+[33m|[m * [33m8179875[m Update readme.md
+* [34m|[m [33mee57c5a[m update todo
+[34m|[m[34m/[m  
+* [33me8fd370[m signature fix
+* [33m762c0da[m fixed navbar
+* [33mdf20623[m toggle-button
+* [33m1c1be00[m blog-post order
+* [33m54bb056[m responsive
+* [33m7c5ded9[m new hero section
+* [33m3797347[m separate files
+* [33m1a64c2b[m new hero section
+* [33m0bf10aa[m changes
+* [33m7285e16[m more responsive
+* [33m3fb037a[m new hero section
+* [33m6b55575[m separate file
+* [33m63c604c[m separate files
+* [33mfe91596[m separate file for footer
+* [33m2d08069[m new hero section
+* [33m20cf7db[m order
+* [33mb7667f2[m Update index.html
+* [33m3d904e2[m Update index.html
+* [33m0858383[m Update readme.md
+* [33m68b4f43[m minor adjustments
+* [33m5a72dd5[m minor adjustments
+* [33m9ba7ab3[m minor adjustments
+*   [33m9ee0f51[m Merge branch 'main' of https://github.com/Sh9hid/blog
+[35m|[m[36m\[m  
+[35m|[m * [33mb357d52[m Delete screenrecording.mkv
+[35m|[m * [33md8c21ce[m Add files via upload
+* [36m|[m [33mceeb227[m downlaod button
+[36m|[m[36m/[m  
+* [33mc1583a6[m minor adjustments
+* [33mee66c6a[m Add files via upload
+* [33me856d7a[m minor adjustments
+* [33m6ee3746[m Update and rename README.md to readme.md
+* [33mdff961e[m Delete 1ABF9146-571B-4266-821D-20E5649BE313.GIF
+* [33m5d6be92[m minor adjustments
+* [33m5112b73[m added interactivity
+* [33m21a3502[m animation
+* [33mb0f1278[m animation
+* [33m5af69b5[m interactivity

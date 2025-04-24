@@ -313,7 +313,7 @@
         <li><a href="http://catb.org/">Eric Raymond</a></li>
         <li><a href="https://vadimkravcenko.com">Vadim</a></li>
         <li><a href="https://www.onestopmba.com/">One Stop MBA</a></li>
-        <li><a href="https://www.30secondsofcode.org/">30 seconds of code</a></li>
+        <li><a href="https://www.30secondsofcode.org/">30 Seconds of Code</a></li>
     </ul>
 </details>
 
@@ -938,35 +938,72 @@ toggleBtn.addEventListener('click', () => {
     moreText.style.display = "inline";
   }
 }
-// Hide menu button
-function initMenu() {
+document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
-
-  const toggleMenu = () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  
+  // Toggle menu function
+  function toggleMenu() {
     navLinks.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    document.body.classList.toggle('no-scroll');
-  };
-
-  // Mobile-only functionality
+    const isExpanded = navLinks.classList.contains('active');
+    menuToggle.setAttribute('aria-expanded', isExpanded);
+    
+    // Toggle body scroll
+    document.body.style.overflow = isExpanded ? 'hidden' : '';
+  }
+  
+  // Only add event listeners if on mobile
   if (window.matchMedia("(max-width: 768px)").matches) {
     menuToggle.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking on links
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('no-scroll');
+        if (navLinks.classList.contains('active')) {
+          toggleMenu();
+        }
       });
     });
   }
-}
-
-// Initialize and handle resize
-initMenu();
-window.addEventListener('resize', initMenu);
-  </script>
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    // If resizing to desktop, ensure menu is visible
+    if (window.matchMedia("(min-width: 769px)").matches) {
+      navLinks.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+  
+  // Dark mode toggle
+  const toggleBtn = document.getElementById('toggle-theme');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.classList.toggle('active');
+    });
+  }
+  
+  // Read more button
+  const readMoreBtn = document.getElementById('myBtn');
+  if (readMoreBtn) {
+    readMoreBtn.addEventListener('click', function() {
+      const dots = document.getElementById("dots");
+      const moreText = document.getElementById("more");
+      
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        this.innerHTML = '<i class="fa fa-download"></i> Read more';
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        this.innerHTML = '<i class="fa fa-download"></i> Read less';
+        moreText.style.display = "inline";
+      }
+    });
+  }
+});  </script>
 
 
 </body>

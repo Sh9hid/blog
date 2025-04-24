@@ -35,7 +35,7 @@ html,body {
 }
 
 
-/* ===== Desktop Navigation (Default) ===== */
+/* ===== Desktop Nav ===== */
 nav {
   position: fixed;
   width: 100%;
@@ -62,6 +62,7 @@ nav {
 .menu-toggle {
   display: none; /* Hidden on desktop */
 }
+
 nav:hover {
   color: #d42700;
 }
@@ -148,7 +149,7 @@ header {
 
 /* Mobile Toggle Button (Hidden on Desktop) */
 .menu-toggle {
-  display: none;
+  /* display: none; */
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -171,7 +172,6 @@ header {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-
   body {
     font-size: 14px; Adjust this as needed
   }
@@ -230,12 +230,12 @@ header {
     margin-top: 50%;
   }
 
+
   #certificates {
     /* overflow: hidden; */
     margin-top: -5vh;
   }
-}
-
+  
   nav {
     display: flex;
     justify-content: space-between;
@@ -243,7 +243,7 @@ header {
     flex-wrap: wrap;
     padding: 0.5rem 1rem;
   }
-
+  
   .menu-toggle {
     display: block; /* Show toggle button */
     background: none;
@@ -253,7 +253,7 @@ header {
     cursor: pointer;
     z-index: 1001;
   }
-
+  
   .nav-links {
     display: none; /* Hidden by default */
     width: 100%;
@@ -261,7 +261,7 @@ header {
     gap: 0.5rem;
     padding: 1rem 0;
   }
-
+  
   /* Show nav when menu is active */
   .nav-links.active {
     display: flex;
@@ -275,14 +275,14 @@ header {
     flex-wrap: wrap;
     flex-direction: column;
   }
-
+  
   nav a:hover {
     
     /* transform: none; */
     margin-right: 10%;
     margin-left: 10%;
   }
-
+  
   
   /* Hide Nav Links by Default */
   .nav-links {
@@ -300,38 +300,39 @@ header {
     clip-path: circle(0% at 90% 5%);
     transition: clip-path 0.7s ease, background 0.3s ease;
   }
-
+  
   /* Animate Links */
   .nav-links li {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-
+  
   /* Active State (When Menu Opens) */
   .nav-links.active {
     clip-path: circle(150% at 90% 5%);
   }
-
+  
   .nav-links.active li {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.3s;
   }
-
+  
   /* Transform Hamburger to "X" */
   .menu-toggle.active i.fa-bars {
     display: none;
   }
-
+  
   .menu-toggle i.fa-times {
     display: none;
   }
-
+  
   .menu-toggle.active i.fa-times {
     display: block;
   }
-
+}
+  
 } 
 .footer {
   width: 100%;
@@ -339,5 +340,5 @@ header {
   backdrop-filter: blur(20px) ;
   -webkit-backdrop-filter: blur(20px);
   z-index: 1;
-
+  
 }
