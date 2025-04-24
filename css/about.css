@@ -15,7 +15,11 @@
 
 
   /* Responsive for smaller screens */
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
+    .about-section{
+      padding: 5em; 
+      margin: 20vh;
+    }
     .about-section,
     .section-header
     {
@@ -24,6 +28,8 @@
       align-items: center;
       text-align: center;
       justify-content: center;
+
+
     }
   
     .about-text {
@@ -32,8 +38,7 @@
     }
   
     .about-image img {
-      max-width: 120px;
-      width: 100%;
+      width: 40%;
       height: auto;
     }
   }

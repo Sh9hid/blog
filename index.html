@@ -52,11 +52,10 @@
 
 <body>
     
-    <!--Intro and Navbar-->
+    <!-- Old Intro and secret navbar-->
     <div id="top">
         <div id="heading">
             <header> 
-                
                 <div style="display: flex; flex-direction: row;justify-content: center; margin: 5px;">
                     <img src="assets/farm.svg"
                     style="width: 10%; height: 10%; border-radius: 50%; transition: transform 1s;"
@@ -96,17 +95,27 @@
     <header style="display:flex; background-color: var(--bg-color); color: var(--text-color);">
         
         <nav>
-        <div class="logo">Shahid</div>
-        
+            <!-- Signature -->
+            <div class="logo">
+                <a href="#home">
+                  <img src="assets/signature-nobg.png" alt="Shahid's Signature" class="signature-img">
+                </a>
+              </div>
+            <!-- Mobile nav toggle button -->
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars toggle-icon"></i>
+                <i class="fas fa-times close-icon" style="display:none;"></i>
+              </button>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#blog">Essays</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#blog">Essays</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-
+        <!-- Dark mode button -->
         <button id="toggle-theme" class="button" aria-label="Toggle theme">
             <i class="fas fa-sun icon sun"></i>
             <i class="fas fa-moon icon moon"></i>
@@ -298,9 +307,9 @@
 
         <ul style="list-style-type: none;">
             <div id="prj" style="position: relative;">
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                <!-- <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
                             background-image: url('assets/drink.jpg'); opacity: 0.; z-index: -1;">
-                </div>
+                </div> -->
                 <b><li>Neural Networks and Deep Learning by Andrew Ng <sub>Issued Apr 2023</sub>  <i><a href="https://www.coursera.org/account/accomplishments/verify/TDSZ5X7DYX7X" ;style="color: #e7e7e7;"><button class="button-85" >View</button></a></i></b></li>
             </div>
             <div  id="prj">
@@ -766,7 +775,7 @@
               <div class="typewriter-text">Hi, I'm <b> Shahid</b><span class="cursor">_</span></div>
             </div>
             <div class="bio-section">
-                <p>I'm a software engineer focused on <strong>Artificial Intelligence</strong>, with a particular love for <strong>Computer Vision</strong> and <strong>Natural Language Processing</strong></p>
+                <p>I'm a software engineer focused on <strong>Artificial Intelligence</strong>, with a particular interest in <strong>Computer Vision</strong> and <strong>NLP</strong>.</p>
 
 
                 <p>At the core<span id="dots">...</span><span id="more"> I see engineering as a creative practice. I’m not just here to write functional code—I’m here to design elegant systems, to sculpt ideas into working forms. Code, to me, isn’t just logic—it’s language. It’s a medium through which we express structure, intent, and creativity. It’s how I think out loud.
@@ -820,7 +829,7 @@
         </a>
     </div>
     
-    <div class="contact-form" style="margin-right: 1cm;">
+    <div class="contact-form">
         <form action="#" method="POST">
             <div>
                 <label for="name"><b>Name</b></label>
@@ -886,8 +895,35 @@ toggleBtn.addEventListener('click', () => {
     btnText.innerHTML = "Read less"; 
     moreText.style.display = "inline";
   }
-  
 }
+// Hide menu button
+function initMenu() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  const toggleMenu = () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    navLinks.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    document.body.classList.toggle('no-scroll');
+  };
+
+  // Mobile-only functionality
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    menuToggle.addEventListener('click', toggleMenu);
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  }
+}
+
+// Initialize and handle resize
+initMenu();
+window.addEventListener('resize', initMenu);
   </script>
 
 

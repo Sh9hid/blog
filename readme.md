@@ -31,3 +31,5 @@ Hope you like it. Thanks
 10. 642 media query overlap fix.
 
 11. Make footer better.
+
+12. Fix toggle menu button, only for mobile phones.

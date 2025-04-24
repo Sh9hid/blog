@@ -1,3 +1,10 @@
+/* Precision nav */
+:target {
+  padding-top: 60px;    /* Adjust to match your navbar height (e.g., 60px, 80px) */
+  margin-top: -60px;    /* Must be the same value as padding-top */
+  display: inline-block;
+}
+
 /* Old Navbar */
 .navbar {
     position: fixed;
@@ -140,7 +147,7 @@ body {
   left: 0;
   background: var(--bg-color);
   color: var(--text-color);
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,7 +181,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px; /* offset navbar height */
+  /* padding-top: 80px;  */
 }
 
 .section {
@@ -182,3 +189,20 @@ body {
   min-height: 100vh;
 }
 
+/* Signature */
+.signature-img {
+  height: 60px; /* Adjust size */
+  width: auto; 
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2)); /* Soft glow for visibility */
+  position: relative;
+  z-index: 1000;
+  margin: 0;
+}
+
+.logo img {
+  display: block !important;
+  position: relative;
+  overflow: visible;
+  height: 60px;
+  z-index: 10001 !important;
+}
