@@ -172,11 +172,24 @@ header {
 /* Mobile Styles */
 @media (max-width: 768px) {
 
+  body {
+    font-size: 14px; Adjust this as needed
+  }
+
+
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 90%; /* Shrink headings slightly */
+  }
+
+  p {
+    font-size: 60%;
+  }
+  
   #certificates {
     overflow: hidden;
-    margin-top: 10%;
-    padding-top: 10%;
   }
+
   #prj,
   nav a,
   #prj:hover,
@@ -190,13 +203,13 @@ header {
     /* overflow: hidden; */
   }
   
-
+  
   #bookmarks {
-    display: none;
+    /* display: none; */
   }
   #home{
     margin-top: 5vh;
-
+    
   }
   .home,.social-icons, .button-85 {
     display: flex;
@@ -204,7 +217,7 @@ header {
     /* flex-direction: column; */
     flex-shrink: 2;
     /* margin-bottom: 20vh; */
-
+    
   }
   .button-85 {
     margin-bottom: 0%;
@@ -212,15 +225,16 @@ header {
   .logo {
     display: block;
   }
-
+  
   .main-div{
     margin-top: 50%;
   }
-
-  #certificates {
+  
+  #id {
     overflow: hidden;
-    margin-top: -35vh;
+    /* margin-top: -35vh; */
   }
+}
 
   nav {
     display: flex;
