@@ -19,17 +19,15 @@ Hope you like it. Thanks
 
 7. Add a skills section should contain linear progreess bar or circular progress indicator. 
 
-5. Add a logo with the name written.
-
-6. Add translucent effect to the nav bar.
-
-9. Card view highlights on hover with a image. (preferrable pink outline)
-
+  
 8. Fix all html errors. 
+
 2. Make html modular. 
 
-10. 642 media query overlap fix.
-
-11. Make footer better.
+11. Make footer better. (meh)
 
 12. Fix toggle menu button, only for mobile phones.
+
+5. Adjust the size of nav and the logo with the name written.
+
+<!-- 9. Card view highlights on hover with a image. (preferrable pink outline) -- idk man>
