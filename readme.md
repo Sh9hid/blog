@@ -17,19 +17,18 @@ Hope you like it. Thanks
 
 # TODO :
 
-12. Add services cards section. 
+13. Add services cards section. 
 
 7. Add a skills section should contain linear progreess bar or circular progress indicator. 
 
-  
-8. Fix all html errors. 
+8. Fix all errors. 
 
 2. Make html modular. 
 
 11. Make footer better. (meh)
 
-12. Fix toggle menu button, only for mobile phones.
-
 5. Adjust the size of nav and the logo with the name written.
+
+14. Add a separate photo for about section. (meh)
 
 <!-- 9. Card view highlights on hover with a image. (preferrable pink outline) -- idk man>

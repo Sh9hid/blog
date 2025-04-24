@@ -61,6 +61,7 @@
     padding: 60px 20px;
     color: var(--text-color);
     min-height: 100vh;
+    flex:1;
   }
   
   .home-content {
@@ -159,6 +160,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  
 }
 
 .nav-links a {

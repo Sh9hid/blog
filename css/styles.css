@@ -129,6 +129,9 @@ header {
   list-style-position: inside;
   box-sizing: border-box;
   word-wrap: break-word;
+  overflow: hidden;
+  max-width: 100%;
+
 
 
 }
@@ -168,14 +171,25 @@ header {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+
+  #certificates {
+    overflow: hidden;
+    margin-top: 10%;
+    padding-top: 10%;
+  }
   #prj,
   nav a,
   #prj:hover,
   nav a:hover {
     transform: none;
-    margin-right: 10%;
-    margin-left: 10%;
+    width: 100% !important;
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+    /* margin-top: 10%; */
+    box-sizing: border-box;
+    /* overflow: hidden; */
   }
+  
 
   #bookmarks {
     display: none;
