@@ -218,8 +218,8 @@ header {
   }
 
   #certificates {
-    overflow: hidden;
-    margin-top: -35vh;
+    /* overflow: hidden; */
+    margin-top: -5vh;
   }
 
   nav {
