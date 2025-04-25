@@ -32,6 +32,7 @@ html,body {
   padding: 0;
   box-sizing: border-box;
   font-size: larger;
+  scroll-padding-top: 60px;
 }
 
 
@@ -72,7 +73,7 @@ nav a:hover {
 }
 
 .hero {
-  height: 100vh;
+  height: 60vh;
 }
 
 
@@ -80,6 +81,17 @@ header {
   justify-content: center;
  }
 
+#services {
+  word-wrap: break-word;
+  padding-right: 10px;
+  margin-right: 40px;
+  margin-left:20px
+}
+
+
+#bookmarks {
+  padding-left: 10%;
+}
 
 /* Bookmarks dropdown links */
   /* Dropdown styles */
@@ -160,6 +172,7 @@ header {
 
 
 
+ 
 @media (max-width: 300px) {
   .home-content, #certificates {
     display: flex;
