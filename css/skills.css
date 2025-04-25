@@ -101,4 +101,63 @@
 	  } to {
 		  --progress-value: var(--value);
 	  }
+  }  .meta-skills-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+    font-family: system-ui, sans-serif;
+  }
+
+  .meta-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+  }
+
+  .progress-ring {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+
+  .progress-ring svg {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+  }
+
+  .progress-ring circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.5s ease;
+  }
+
+  .bg {
+    stroke: var(--bg-color);
+  }
+
+  .progress {
+    stroke: url(#grad);
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+  }
+
+  .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .meta-label {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #444;
   }

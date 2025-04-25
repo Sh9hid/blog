@@ -58,7 +58,7 @@
 }
 
 .container .services .card:hover .content .title{
-    color: white;
+    color:var(--bg-color);
 }
 
 .container .services .card .content .title{

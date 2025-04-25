@@ -380,10 +380,69 @@
 <b>Research and Soft Skills</b>
 <progress value="100" max="100" style="--value: 90; --max: 100;"></progress>
 <br>
+<p"><i>Framework that I rely on</i><em></em></p>
+
+          </div>
+         <!-- Gradient -->
+<svg width="0" height="0">
+    <defs>
+      <linearGradient id="grad" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#D16BA5" />
+        <stop offset="100%" stop-color="#86A8E7" />
+      </linearGradient>
+    </defs>
+  </svg>
+  
+  <div class="meta-skills-section">
+    <div class="meta-skill" data-percent="90">
+      <div class="progress-ring">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="45" />
+          <circle class="progress" cx="60" cy="60" r="45" />
+        </svg>
+        <div class="percentage">0%</div>
+      </div>
+      <div class="meta-label"><b><em>Systems Thinking</em></b></div>
+    </div>
+  
+    <div class="meta-skill" data-percent="75">
+      <div class="progress-ring">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="45" />
+          <circle class="progress" cx="60" cy="60" r="45" />
+        </svg>
+        <div class="percentage">0%</div>
+      </div>
+      <div class="meta-label"><b><em>Creativity</em></b></div>
+    </div>
+  
+    <div class="meta-skill" data-percent="85">
+      <div class="progress-ring">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="45" />
+          <circle class="progress" cx="60" cy="60" r="45" />
+        </svg>
+        <div class="percentage">0%</div>
+      </div>
+      <div class="meta-label"><b><em>Clarity</em></b></div>
+    </div>
+  
+    <div class="meta-skill" data-percent="95">
+      <div class="progress-ring">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="45" />
+          <circle class="progress" cx="60" cy="60" r="45" />
+        </svg>
+        <div class="percentage">0%</div>
+      </div>
+      <div class="meta-label"><b><em>Curiosity</em></b></div>
+    </div>
+  </div>
+  
           </div>
         </div>
       </div>
-      
+
 
 
 
@@ -1038,6 +1097,39 @@
         }
       });
     });
+    // Circular progress 
+    const rings = document.querySelectorAll('.meta-skill');
+
+  const animateProgress = (el, percent) => {
+    const circle = el.querySelector('.progress');
+    const text = el.querySelector('.percentage');
+    const radius = 60;
+    const circumference = 2 * Math.PI * radius;
+    let current = 0;
+
+    const animate = () => {
+      if (current <= percent) {
+        const offset = circumference - (current / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+        text.textContent = `${current}%`;
+        current++;
+        requestAnimationFrame(animate);
+      }
+    };
+    animate();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const percent = parseInt(entry.target.getAttribute('data-percent'), 10);
+        animateProgress(entry.target, percent);
+        observer.unobserve(entry.target); // only animate once
+      }
+    });
+  }, { threshold: 0.6 });
+
+  rings.forEach(el => observer.observe(el));
     </script>
 </body>
 
