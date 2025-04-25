@@ -22,10 +22,6 @@ Hope you like it. Thanks
 
 2. Make html modular. 
 
-11. Make footer better. (meh)
-
 5. Adjust the size of nav and the logo with the name written.
-
-14. Add a separate photo for about section. (meh)
 
 <!-- 9. Card view highlights on hover with a image. (preferrable pink outline) -- idk man>
