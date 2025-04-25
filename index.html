@@ -907,91 +907,89 @@
 </div> <!--Main div-->
 
 <script>
-    // <Nav secret key 
-    document.addEventListener('keydown', function(e) {
-    if (e.shiftKey && e.key.toLowerCase() === 't') {
-      const topDiv = document.getElementById('top');
-      topDiv.classList.toggle('show');
-    }
-  });
-// Dark mode button
-const toggleBtn = document.getElementById('toggle-theme');
-
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  toggleBtn.classList.toggle('active'); // <- this is needed for the animation
-});
-
-
-//   Read more button
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  
-  // Toggle menu function
-  function toggleMenu() {
-    navLinks.classList.toggle('active');
-    const isExpanded = navLinks.classList.contains('active');
-    menuToggle.setAttribute('aria-expanded', isExpanded);
+    document.addEventListener('DOMContentLoaded', function() {
+      // ===== Dark Mode Toggle =====
+      const toggleBtn = document.getElementById('toggle-theme');
+      if (toggleBtn) {
+        // Initialize theme from localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.classList.toggle('dark', savedTheme === 'dark');
+        
+        toggleBtn.addEventListener('click', () => {
+          document.body.classList.toggle('dark');
+          toggleBtn.classList.toggle('active');
+          localStorage.setItem('theme', 
+            document.body.classList.contains('dark') ? 'dark' : 'light'
+          );
+        });
+      }
     
-    // Toggle body scroll
-    document.body.style.overflow = isExpanded ? 'hidden' : '';
-  }
-  
-  // Only add event listeners if on mobile
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    menuToggle.addEventListener('click', toggleMenu);
+      // ===== Mobile Menu Toggle =====
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      function toggleMenu() {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.toggle('active');
+          const isOpen = navLinks.classList.contains('active');
+          menuToggle.setAttribute('aria-expanded', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+          
+          // Toggle menu icons
+          menuToggle.querySelector('.toggle-icon').style.display = isOpen ? 'none' : 'block';
+          menuToggle.querySelector('.close-icon').style.display = isOpen ? 'block' : 'none';
+        }
+      }
     
-    // Close menu when clicking on links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          toggleMenu();
+      // Always register click handler
+      menuToggle.addEventListener('click', toggleMenu);
+    
+      // Close menu on link click (mobile only)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
+            toggleMenu();
+          }
+        });
+      });
+    
+      // Window resize handler
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          navLinks.classList.remove('active');
+          document.body.style.overflow = '';
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.querySelector('.toggle-icon').style.display = 'block';
+          menuToggle.querySelector('.close-icon').style.display = 'none';
+        }
+      });
+    
+      // ===== Read More Button =====
+      const readMoreBtn = document.getElementById('myBtn');
+      if (readMoreBtn) {
+        readMoreBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dots = document.getElementById("dots");
+          const moreText = document.getElementById("more");
+          const isExpanded = dots.style.display === "none";
+          
+          dots.style.display = isExpanded ? "inline" : "none";
+          moreText.style.display = isExpanded ? "none" : "inline";
+          this.innerHTML = isExpanded ? 
+            '<i class="fa fa-download"></i> Read more' : 
+            '<i class="fa fa-download"></i> Read less';
+        });
+      }
+    
+      // ===== Secret Key Handler =====
+      document.addEventListener('keydown', function(e) {
+        if (e.shiftKey && e.key.toLowerCase() === 't') {
+          const topDiv = document.getElementById('top');
+          if (topDiv) topDiv.classList.toggle('show');
         }
       });
     });
-  }
-  
-  // Handle window resize
-  window.addEventListener('resize', function() {
-    // If resizing to desktop, ensure menu is visible
-    if (window.matchMedia("(min-width: 769px)").matches) {
-      navLinks.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-  });
-  
-  // Dark mode toggle
-  const toggleBtn = document.getElementById('toggle-theme');
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggleBtn.classList.toggle('active');
-    });
-  }
-  
-  // Read more button
-  const readMoreBtn = document.getElementById('myBtn');
-  if (readMoreBtn) {
-    readMoreBtn.addEventListener('click', function() {
-      const dots = document.getElementById("dots");
-      const moreText = document.getElementById("more");
-      
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        this.innerHTML = '<i class="fa fa-download"></i> Read more';
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        this.innerHTML = '<i class="fa fa-download"></i> Read less';
-        moreText.style.display = "inline";
-      }
-    });
-  }
-});  </script>
-
-
+    </script>
 </body>
 
 <footer class="finale" style="border-radius: 5%;; text-align: center; background-color: #f95c3d; margin-top: 30px; color: white; width: 100%;">
